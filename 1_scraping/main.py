@@ -5,7 +5,7 @@ from fake_useragent import UserAgent
 from pyshorteners import Shortener
 import xlsxwriter
 
-# список главных url по которым идет парсинг
+# list main url
 BASE_URLS = [
     "https://meget.kiev.ua/stroitelnie-kompanii-zastroyshiki/", # 1
     "https://meget.kiev.ua/stroitelnie-kompanii/2/?catalog_operation=builder", # 2
@@ -27,7 +27,7 @@ BASE_URLS = [
     "https://meget.kiev.ua/stroitelnie-kompanii/18/?catalog_operation=builder", # 18
 ]
 HEADERS = {"User-Agent": UserAgent().random}
-OUT_XLSX_FILENAME = 'parsed_data.xlsx'
+OUT_XLSX_FILENAME = 'ua_builders.xlsx'
 
 async def parse_page(session, url):
     parsed_data = []
